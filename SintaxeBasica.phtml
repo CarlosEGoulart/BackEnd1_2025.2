@@ -1,0 +1,42 @@
+<?php
+//Exercício: Pesquisas as diferenças entre uma função e o echo.
+//R: função é reutilizavel e executa uma tarefa retornando (ou não) um valor
+//echo simplesmente exibe itens na tela
+
+//Exercício: Qual a diferença entre const e define para definição de variáveis.
+//R: const atribui um valor ao bloco de codigo em que está sendo definido, enquanto o define aloca o valor passado na memoria
+//a principal diferença é o escopo em que funcionam
+
+//Exercício
+//Pesquise entenda: Por que o resultado do código a seguir é 7 e não 8?
+//<?php
+// floor((0.1+0.7)*10)
+//R: O resultado 7 se deve por conta dos numeros flutuantes, já que 0.1+0.7 pode não resultar em 0.8 exatamente
+// o que leva a multiplicação a algo como 7.999999, que ao ser aplicada a função floor(), é arredondado para 7.
+
+$Ex3 = floor((0.1+0.7)*10);
+print $Ex3;
+
+echo "Hello World!";
+print "Hello World!";
+
+$hello = "Hello World por variavel!";
+
+
+
+print $hello;
+
+define("namorada", "Julia");
+
+$age = 20;
+
+print " Olá, ". namorada ." você tem {$age} anos";
+
+$loveTimes = [];
+
+for($i = 0; $i < 12; $i++){
+    echo " |Amo a Julia ". $i + 1 . " |";
+    array_push($loveTimes, $i);
+}
+
+print_r($loveTimes);

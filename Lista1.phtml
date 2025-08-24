@@ -1,0 +1,68 @@
+<?php
+
+//1.Readline
+function welcome(){
+    $name = readline("Digite seu nome: ");
+    return "Seja bem vindo(a), $name". "\n";
+}
+
+echo welcome();
+
+//2. CDU
+function CDU(){
+    $num = readline("Digite um número de 3 digitos: ");
+    while($num < 99 || $num > 999){
+        echo "Seu número não possui 3 digitos, por favor tente novamente. ";
+        $num = readline("Digite um número de 3 digitos: ");
+    }
+    return "Centenas: ". intval($num/100). "\n"  . "Dezenas: ". intval($num%100/10) . "\n" . "Unidades: ". $num%10 . "\n" ;
+}
+
+echo CDU();
+
+//3. Faturamento
+function faturamento() {
+    $fitas = readline("Digite o número de fitas presentes na locadora: ");
+    $aluguel = readline("Digite o valor cobrado pelo aluguel de cada fita: ");
+    return 
+    //(a) Sabendo que um terço das fitas são alugadas por mês, exiba o faturamento anual da locadora;
+    "Faturamento anual: R$ " . (round($fitas / 3) * $aluguel * 12) . "\n" .
+    
+    
+    //(b) Quando o cliente atrasa a entrega, é cobrada uma multa de 10% sobre o valor do aluguel. 
+    // Sabendo que um décimo das fitas alugadas no mês são devolvidas com atraso,
+    // calcule o valor ganho com multas por mês;
+    "Valor multas mensal: R$ " . (round(round($fitas / 3) / 10) * ($aluguel * 0.1)) . "\n" .
+    
+    
+    "Total de fitas ao final de 1 ano: " . (($fitas - ($fitas * 0.02)) + ($fitas * 0.1)). "\n";
+    //(c) Sabendo ainda que 2% das fitas se estragam ao longo do ano, 
+    //e um décimo do total é comprado para reposição, 
+    //exiba a quantidade de fitas que a locadora terá no final do ano.
+}
+
+echo faturamento();
+
+
+//4. Ordem inversa
+
+function reverseOrder(){
+    $array = [];
+    $input = readline("Digite os valores que serão adicionados à lista: ");
+    while($input != 0){
+        array_push($array, $input);
+        $input = readline("Digite os valores que serão adicionados à lista: ");
+    }
+    return array_reverse($array);
+}
+
+print_r(reverseOrder());
+
+
+//5. Dados Pessoais
+function dadosPessoais(){
+    $name = readline("Digite seu nome: ");
+    $age = readline("Digite sua idade: ");
+    $number = readline("Digite seu número de telefone: ");
+    $hash;
+}
